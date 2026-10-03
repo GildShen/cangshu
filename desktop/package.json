@@ -1,0 +1,76 @@
+{
+  "name": "cangshu-reader",
+  "version": "1.5.2",
+  "description": "Local EPUB library and web reader",
+  "author": "Cangshu",
+  "private": true,
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "icons": "node make-icon.cjs",
+    "dist": "node build-pdf.cjs && npm run icons && electron-builder --win nsis --x64",
+    "test": "node --test test.cjs ai.test.cjs openai.test.cjs"
+  },
+  "devDependencies": {
+    "electron": "44.3.0",
+    "electron-builder": "26.15.3",
+    "esbuild": "^0.28.2",
+    "pdfjs-dist": "^6.3.289",
+    "sharp": "0.35.4"
+  },
+  "build": {
+    "appId": "local.cangshu.reader",
+    "productName": "藏書",
+    "executableName": "Cangshu",
+    "asar": true,
+    "directories": {
+      "output": "../desktop-release"
+    },
+    "files": [
+      "main.cjs",
+      "ai-service.cjs",
+      "ai-usage.cjs",
+      "openai-provider.cjs",
+      "preload.cjs",
+      "paths.cjs",
+      "icon.png",
+      {
+        "from": "../ebook-browser",
+        "to": "reader",
+        "filter": [
+          "**/*",
+          "!README.md"
+        ]
+      }
+    ],
+    "win": {
+      "icon": "icon.ico",
+      "target": [
+        "nsis"
+      ],
+      "signExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "deleteAppDataOnUninstall": false,
+      "artifactName": "Cangshu-Setup-${version}.${ext}"
+    },
+    "fileAssociations": [
+      {
+        "ext": "pdf",
+        "name": "PDF 文件",
+        "description": "使用藏書閱讀 PDF",
+        "role": "Viewer"
+      },
+      {
+        "ext": "epub",
+        "name": "EPUB 電子書",
+        "description": "使用藏書閱讀 EPUB",
+        "role": "Viewer"
+      }
+    ]
+  }
+}
