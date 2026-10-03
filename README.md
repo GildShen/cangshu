@@ -14,7 +14,7 @@ Windows EPUB / PDF 閱讀器，提供書櫃分類、閱讀筆記、螢光筆與 
 
 ## 安裝
 
-Windows 安裝檔將透過 [GitHub Releases](https://github.com/GildShen/cangshu/releases) 提供；若尚無發行版本，可依下方步驟自行建置。
+從 [GitHub Releases](https://github.com/GildShen/cangshu/releases/latest) 下載 `Cangshu-Setup-<版本>.exe`，執行後依安裝精靈操作。發行頁另附 SHA-256 校驗檔與對應原始碼。
 
 目前安裝檔未簽章，Windows 可能顯示未知發行者提示。程式不會自動接管預設檔案關聯，請在 Windows「預設應用程式」中自行選擇。
 
@@ -57,4 +57,4 @@ PDF 掃描頁可閱讀，但未經 OCR 不提供文字選取或搜尋。DRM 電�
 
 ## 授權
 
-本專案尚未選定開源授權。公開原始碼不代表授予修改或再散布的授權；第三方元件依各自授權提供，詳見 [第三方聲明](THIRD_PARTY_NOTICES.md)。
+本專案採用 [MIT License](LICENSE)，允許使用、修改、散布與商業使用，須保留版權與授權聲明。第三方元件依各自授權提供，詳見 [第三方聲明](THIRD_PARTY_NOTICES.md)。AI 服務與你匯入的電子書不屬於本專案的授權範圍。

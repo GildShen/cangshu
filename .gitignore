@@ -3,6 +3,7 @@
 !/.gitignore
 !/README.md
 !/THIRD_PARTY_NOTICES.md
+!/LICENSE
 !/ebook-browser/
 !/desktop/
 /desktop/*

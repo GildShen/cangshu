@@ -1,6 +1,7 @@
 {
   "name": "cangshu-reader",
-  "version": "1.5.2",
+  "version": "1.5.3",
+  "license": "MIT",
   "description": "Local EPUB library and web reader",
   "author": "Cangshu",
   "private": true,
@@ -34,6 +35,8 @@
       "preload.cjs",
       "paths.cjs",
       "icon.png",
+      { "from": "../LICENSE", "to": "LICENSE" },
+      { "from": "../THIRD_PARTY_NOTICES.md", "to": "THIRD_PARTY_NOTICES.md" },
       {
         "from": "../ebook-browser",
         "to": "reader",

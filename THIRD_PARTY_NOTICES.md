@@ -1,7 +1,7 @@
 # Third-party components
 
 The application includes third-party components under their respective licenses.
-The project itself has not selected an open-source license yet.
+Original project code is licensed under the MIT License in LICENSE.
 
 | Component | Upstream | License |
 | --- | --- | --- |
